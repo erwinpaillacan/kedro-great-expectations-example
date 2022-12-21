@@ -42,7 +42,7 @@ class DataValidationHooks:
         if dataset_name in self.dataset_expectation_mapping:
 
             expectation_context = ge.data_context.DataContext(
-                context_root_dir=self.context_root_dir
+                #context_root_dir=self.context_root_dir
             )
             checkpoint_name = self.dataset_expectation_mapping[dataset_name]
 
