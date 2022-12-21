@@ -1,0 +1,19 @@
+{
+  "data_asset_type": "Dataset",
+  "expectation_suite_name": "companies.intermediate.suite",
+  "expectations": [
+    {
+      "expectation_type": "expect_column_to_exist",
+      "kwargs": {
+        "column": "id"
+      },
+      "meta": {
+        "source": "companies"
+      }
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "great_expectations_version": "0.15.41"
+  }
+}
