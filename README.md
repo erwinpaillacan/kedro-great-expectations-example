@@ -5,6 +5,14 @@ Minimal example:
 Download this data <https://kedro-org.github.io/kedro/companies.csv>
 and save it in 01_raw
 
+The you can execute:
+
+```
+kedro run
+```
+
+The in the folder data/08_reporting/great_expectations you will find a great expectations report
+
 ## Overview
 
 This is your new Kedro project, which was generated using `Kedro 0.18.4`.
