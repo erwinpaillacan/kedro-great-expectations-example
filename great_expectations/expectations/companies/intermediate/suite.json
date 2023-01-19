@@ -10,6 +10,15 @@
       "meta": {
         "source": "companies"
       }
+    },
+    {
+      "expectation_type": "expect_column_to_exist",
+      "kwargs": {
+        "column": "fake_column"
+      },
+      "meta": {
+        "source": "companies"
+      }
     }
   ],
   "ge_cloud_id": null,

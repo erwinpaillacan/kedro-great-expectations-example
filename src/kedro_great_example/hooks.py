@@ -4,7 +4,7 @@ from typing import Any, Dict
 import great_expectations as ge
 from kedro.framework.hooks import hook_impl
 from kedro.io import DataCatalog
-
+from great_expectations.exceptions import ValidationError
 
 logger = logging.getLogger(__name__)
 
@@ -13,6 +13,7 @@ class DataValidationHooks:
     def __init__(self):
         self.dataset_expectation_mapping = None
         self.context_root_dir = None
+        self.break_on_error = False
 
     @hook_impl
     def after_catalog_created(self, catalog: DataCatalog):
@@ -21,6 +22,9 @@ class DataValidationHooks:
         )
         self.context_root_dir = catalog.load(
             "params:great_expectations.context_root_dir"
+        )
+        self.break_on_error = catalog.load(
+            "params:great_expectations.break_on_error"
         )
 
     @hook_impl
@@ -46,7 +50,7 @@ class DataValidationHooks:
             )
             checkpoint_name = self.dataset_expectation_mapping[dataset_name]
 
-            expectation_context.run_checkpoint(
+            results = expectation_context.run_checkpoint(
                 checkpoint_name=checkpoint_name,
                 batch_request={
                     "runtime_parameters": {"batch_data": data},
@@ -55,3 +59,6 @@ class DataValidationHooks:
                     },
                 },
             )
+            if self.break_on_error:
+                if not results["success"]:
+                    raise ValidationError(results)

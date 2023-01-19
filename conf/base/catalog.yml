@@ -6,6 +6,6 @@ companies.raw:
   type: pandas.CSVDataSet
   filepath: data/01_raw/companies.csv
 
-preprocessed_companies:
-  type: pandas.CSVDataSet
-  filepath: data/02_intermediate/companies.csv
+# preprocessed_companies:
+#   type: pandas.CSVDataSet
+#   filepath: data/02_intermediate/companies.csv

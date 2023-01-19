@@ -1,17 +1,20 @@
-# kedro-great-example
+# Minimal example Kedro with GE v3.0 API
 
 Minimal example:
 
 Download this data <https://kedro-org.github.io/kedro/companies.csv>
 and save it in 01_raw
 
+In conf/base/parameters/great_expectations_hook.yml you can find some parameters of the hook.
+The validation works with in memory datasets [you can try commenting the catalog entry of `preprocessed_companies`]
+
 The you can execute:
 
-```
+```bash
 kedro run
 ```
 
-The in the folder data/08_reporting/great_expectations you will find a great expectations report
+Then in the folder data/08_reporting/great_expectations you will find a great expectations report
 
 ## Overview
 
