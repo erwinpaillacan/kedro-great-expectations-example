@@ -7,22 +7,89 @@
       "kwargs": {
         "column": "id"
       },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "id"
+      },
       "meta": {
+        "layer": "intermediate",
         "source": "companies"
       }
     },
     {
       "expectation_type": "expect_column_to_exist",
       "kwargs": {
-        "column": "fake_column"
+        "column": "company_rating"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "company_rating"
       },
       "meta": {
+        "layer": "intermediate",
+        "source": "companies"
+      }
+    },
+    {
+      "expectation_type": "expect_column_to_exist",
+      "kwargs": {
+        "column": "company_location"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "company_location"
+      },
+      "meta": {
+        "layer": "intermediate",
+        "source": "companies"
+      }
+    },
+    {
+      "expectation_type": "expect_column_to_exist",
+      "kwargs": {
+        "column": "total_fleet_count"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "total_fleet_count"
+      },
+      "meta": {
+        "layer": "intermediate",
+        "source": "companies"
+      }
+    },
+    {
+      "expectation_type": "expect_column_to_exist",
+      "kwargs": {
+        "column": "iata_approved"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "iata_approved"
+      },
+      "meta": {
+        "layer": "intermediate",
         "source": "companies"
       }
     }
   ],
   "ge_cloud_id": null,
   "meta": {
-    "great_expectations_version": "0.15.41"
+    "great_expectations_version": "0.16.12"
   }
 }

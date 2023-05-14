@@ -166,3 +166,8 @@ venv.bak/
 */great_expectations/uncommitted
 *.ge_store_backend_id
 uncommitted
+
+
+# save data as example
+
+!data/01_raw/companies.csv

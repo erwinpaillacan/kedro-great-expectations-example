@@ -5,9 +5,9 @@ isort~=5.0
 jupyter~=1.0
 jupyterlab_server>=2.11.1, <2.16.0
 jupyterlab~=3.0
-kedro~=0.18.7
+kedro~=0.18
 nbstripout~=0.4
 pytest-cov~=3.0
 pytest-mock>=1.7.1, <2.0
 pytest~=6.2
-great_expectations==0.16.10
+great_expectations~=0.16
