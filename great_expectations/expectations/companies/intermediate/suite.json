@@ -7,7 +7,10 @@
       "kwargs": {
         "column": "id"
       },
-      "meta": {}
+      "meta": {
+        "layer": "intermediate",
+        "source": "companies"
+      }
     },
     {
       "expectation_type": "expect_column_values_to_not_be_null",
@@ -24,7 +27,10 @@
       "kwargs": {
         "column": "company_rating"
       },
-      "meta": {}
+      "meta": {
+        "layer": "intermediate",
+        "source": "companies"
+      }
     },
     {
       "expectation_type": "expect_column_values_to_not_be_null",
@@ -41,7 +47,10 @@
       "kwargs": {
         "column": "company_location"
       },
-      "meta": {}
+      "meta": {
+        "layer": "intermediate",
+        "source": "companies"
+      }
     },
     {
       "expectation_type": "expect_column_values_to_not_be_null",
@@ -58,7 +67,10 @@
       "kwargs": {
         "column": "total_fleet_count"
       },
-      "meta": {}
+      "meta": {
+        "layer": "intermediate",
+        "source": "companies"
+      }
     },
     {
       "expectation_type": "expect_column_values_to_not_be_null",
@@ -75,12 +87,25 @@
       "kwargs": {
         "column": "iata_approved"
       },
-      "meta": {}
+      "meta": {
+        "layer": "intermediate",
+        "source": "companies"
+      }
     },
     {
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
         "column": "iata_approved"
+      },
+      "meta": {
+        "layer": "intermediate",
+        "source": "companies"
+      }
+    },
+    {
+      "expectation_type": "expect_column_to_exist",
+      "kwargs": {
+        "column": "fake_column"
       },
       "meta": {
         "layer": "intermediate",
