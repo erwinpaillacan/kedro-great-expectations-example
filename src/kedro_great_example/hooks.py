@@ -44,10 +44,8 @@ class DataValidationHooks:
           data (Any): The data to be validated.
         """
         if dataset_name in self.dataset_expectation_mapping:
-
-            expectation_context = ge.data_context.DataContext(
-                context_root_dir=self.context_root_dir
-            )
+            
+            expectation_context = ge.get_context(context_root_dir=self.context_root_dir)
             checkpoint_name = self.dataset_expectation_mapping[dataset_name]
 
             results = expectation_context.run_checkpoint(

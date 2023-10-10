@@ -1,7 +1,7 @@
 [tool.kedro]
 package_name = "kedro_great_example"
 project_name = "kedro-great-example"
-kedro_init_version = "0.18.7"
+kedro_init_version = "0.18.13"
 
 [tool.isort]
 profile = "black"
